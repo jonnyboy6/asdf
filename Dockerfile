@@ -6,7 +6,7 @@ RUN npm install
 ADD ./index.js ./index.js
 ADD ./public ./public
 
-EXPOSE 8080 
-#Set up for 8080 ==> 9009
+EXPOSE 80 
+#Set up for 8080 ==> 9004
 
 CMD node index.js
