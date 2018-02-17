@@ -1,11 +1,20 @@
 <html>
 	<head>
-		<title>War</title>
+		<title>War</title >
 	</head>
 	<body style = "background-image: url(/images/Untitled.png); background-repeat: no-repeat; background-size: 100% 100% " >
-	
-		<div align ="center">
-			<embed src = "/games/ageofwar.swf" width = "100%" height = "100%"></embed>
+		<div id="placeholder" style="width:100%; height: 100%; position:absolute;z-index:1;"></div>
+		<div  align ="center" style="width:100% !important; height:100% !important; ">
+			<embed id="game" src = "/games/ageofwar.swf" style="width:100%; height:100%; position:absolute; left:0px;top:0px;z-index:-1;"></embed>
+			
 		</div>	
+		<script>
+			function fullscreen(){
+				let getTheElement = document.getElementById("game");
+				getTheElement.webkitRequestFullscreen();
+				document.getElementById('placeholder').style.display = 'none';
+			}
+			document.onclick = fullscreen;
+		</script>
 	</body>
 </html>

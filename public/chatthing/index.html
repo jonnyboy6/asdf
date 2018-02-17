@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Chatthing</title>
+	</head>
+	<body  style = "background-image: url(/images/Untitled.png); background-repeat: no-repeat; background-size: 100% 100%; padding:100px;">
+		<div>
+				<input id="UserInput" autocomplete ="off"></input>
+		</div>
+			<button  id="sendButton" style="background:none; color:white; border:none; padding:0px; outline:none""> 
+				 Add to List
+			</button>
+		<ul id="ulid", style="color:white; border-left-style:double; border-color:yellow;">
+		</ul>
+		<a href= "../">
+ 				<img src = "/images/colorpicker.gif" width = "65" height = "65"></img>
+			 </a>
+		<script>
+				let newDiv = document.createElement("li");
+				var content = document.createTextNode(document.getElementById("UserInput").value);
+				document.getElementById("sendButton").addEventListener("click", add);
+				document.getElementById("UserInput").addEventListener("keyup", function(keyInfo){
+				if(keyInfo.key === "Enter"){
+					add();
+				}
+				});
+				function add(){
+					let newDiv = document.createElement("LI");
+					var content = document.createTextNode(document.getElementById("UserInput").value);
+					newDiv.appendChild(content);
+					document.getElementById("ulid").append(newDiv);
+					document.getElementById("UserInput").value ="";
+					return content;
+				}
+				
+			</script>
+	</body>
+		
+</html>

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<style id="color">
+		body{
+			background-color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function change(){
+			if(document.body.style.backgroundColor === "blue"){
+				document.body.style.backgroundColor="red";
+				}else if(document.body.style.backgroundColor === "red"){
+				document.body.style.backgroundColor="green";
+				}else{
+				document.body.style.backgroundColor = "blue"
+				}
+			};
+			setInterval(change, 50);
+		</script>
+	</body>
+</html>
